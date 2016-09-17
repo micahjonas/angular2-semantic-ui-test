@@ -1,0 +1,50 @@
+<h2>Gift List</h2>
+<div class="ui cards">
+  <div *ngFor="let gift of gifts"
+    class="card"
+    [class.selected]="gift === selectedGift"
+    (click)="onSelect(gift)">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <div class="ui inverted button">Add Friend</div>
+          </div>
+        </div>
+      </div>
+      <img src="{{gift.img}}">
+    </div>
+    <div class="content">
+      <a class="header">{{gift.name}}</a>
+      <div class="meta">
+        <span class="date">{{gift.created}}</span>
+      </div>
+      <div class="description">
+        {{gift.description}}
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        <i class="add circle icon"></i>
+        {{gift.ordered}}/{{gift.pieces}}
+      </span>
+      <span>
+        <i class="money icon"></i>
+        {{gift.price}}
+      </span>
+    </div>
+    <!-- display if changes have been made: -->
+
+
+    <!-- display else: -->
+    <div class="extra content" >
+      <div class="ui two buttons">
+        <div class="positive ui button">Save</div>
+        <div class="negative ui button">Discard</div>
+      </div>
+    </div>
+    <div class="ui bottom attached red basic button">
+      Delete
+    </div>
+  </div>
+</div>
