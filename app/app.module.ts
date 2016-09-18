@@ -7,6 +7,7 @@ import './rxjs-extensions';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+import { FluidHeightDirective } from './fluidsize.directive';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { InMemoryGiftService }  from './in-memory-gift.service';
 
@@ -20,7 +21,10 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent }  from './hero-search.component';
 import { HeroService }         from './hero.service';
 import { GiftListComponent } from './gift-list.component';
+import { GiftCardComponent } from './gift-card.component';
 import { GiftService }         from './gift.service';
+
+
 
 @NgModule({
   imports:      [
@@ -37,7 +41,9 @@ import { GiftService }         from './gift.service';
     HeroesComponent,
     HeroDetailComponent,
     GiftListComponent,
-    HeroSearchComponent
+    GiftCardComponent,
+    HeroSearchComponent,
+    FluidHeightDirective
   ],
   providers: [
     HeroService,

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
+//import { FluidHeightDirective } from './fluidsize.directive';
 
+import { GiftCardComponent } from './gift-card.component';
 import { Gift } from './gift';
 //import { GiftDetailComponent } from './gift-detail.component';
 import { GiftService } from './gift.service';

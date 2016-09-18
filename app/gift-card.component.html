@@ -1,0 +1,41 @@
+
+  <div class="blurring dimmable image">
+    <div class="ui dimmer">
+      <div class="content">
+        <div class="center">
+          <div class="ui inverted button">Add Friend</div>
+        </div>
+      </div>
+    </div>
+    <img src="{{gift.img}}">
+  </div>
+  <div class="content">
+    <div class="ui transparent input header">
+      <input value={{gift.name}}>
+    </div>
+    <div class="meta">
+      <span class="date">{{gift.created}}</span>
+    </div>
+    <div class="description">
+      <textarea class="my-textarea description" [(ngModel)]="gift.description" fluidHeight></textarea>
+    </div>
+  </div>
+  <div class="extra content">
+    <span class="right floated">
+      <i class="add circle icon"></i>
+      {{gift.ordered}}/{{gift.pieces}}
+    </span>
+    <span>
+      <i class="money icon"></i>
+      {{gift.price}}
+    </span>
+  </div>
+  <div class="extra content" >
+    <div class="ui two buttons">
+      <div class="positive ui button">Save</div>
+      <div class="negative ui button">Discard</div>
+    </div>
+  </div>
+  <div class="ui bottom attached red basic button">
+    Delete
+  </div>

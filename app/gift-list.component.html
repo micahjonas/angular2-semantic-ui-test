@@ -15,12 +15,15 @@
       <img src="{{gift.img}}">
     </div>
     <div class="content">
-      <a class="header">{{gift.name}}</a>
+      <div class="ui transparent input header">
+        <input value={{gift.name}}>
+      </div>
       <div class="meta">
         <span class="date">{{gift.created}}</span>
       </div>
       <div class="description">
-        {{gift.description}}
+        <textarea class="my-textarea description" [(ngModel)]="gift.description" fluidHeight></textarea>
+        <!--<input value= class=description>-->
       </div>
     </div>
     <div class="extra content">
@@ -47,4 +50,6 @@
       Delete
     </div>
   </div>
+  <my-gift-card *ngFor="let gift of gifts"
+    [gift]="gift" class="card" ></my-gift-card>
 </div>
